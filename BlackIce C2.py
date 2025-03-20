@@ -6,6 +6,7 @@ import requests
 RESET = "\033[0m"
 BOLD = "\033[1m"
 WHITE = "\033[37m"
+LIGHT_BLUE = "\033[94m"  # Light Blue for prompt
 BLUE = "\033[34m"
 BLACK = "\033[30m"
 RED = "\033[31m"
@@ -58,7 +59,7 @@ def show_help():
 # Get user input for attack
 def get_input():
     try:
-        command = input(f"{BLACK}[root]~[BlackIce]- {RESET}").strip().lower()
+        command = input(f"{LIGHT_BLUE}[root]~[BlackIce]- {RESET}").strip().lower()
 
         # Exit command
         if command == 'exit':
