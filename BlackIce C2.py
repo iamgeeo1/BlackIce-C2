@@ -58,7 +58,7 @@ def show_help():
 # Get user input for attack
 def get_input():
     try:
-        command = input(f"{BLACK}[root@BlackIce] ~ {RESET}").strip().lower()
+        command = input(f"{BLACK}[root]~[BlackIce]- {RESET}").strip().lower()
 
         # Exit command
         if command == 'exit':
