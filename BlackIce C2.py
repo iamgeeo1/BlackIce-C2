@@ -36,14 +36,32 @@ def display_menu():
     
     # Welcome box in Blue and White
     print(f"{BLUE}+------------------------------------------+{RESET}")
-    print(f"{BLUE}| {WHITE}Welcome to the BlackIce C2 BotNet       {BLUE}|{RESET}")
-    print(f"{BLUE}| Powered by BlackIce API                 |{RESET}")
+    print(f"{BLUE}| {WHITE}Welcome to the BlackIce C2       {BLUE}|{RESET}")
+    print(f"{BLUE}|  {WHITE}Made By Qsecc & Mzz.hm                       |{RESET}")
     print(f"{BLUE}+------------------------------------------+{RESET}")
+print("""          ╓g`                                               ⁿ▄,
+           ╥▓╢╫                                                  ▐╣▓@,
+        ,▓╢╣╣╣▌                                                   ╣╣╣╣▓▄
+      ,▓╣╢╣╣╣╣▓                          y                       /╣╣╣╣╣╣▓▄
+     ▓╢╣╣╣╣╣╣╣╢▓W                    ╔▓   ▓,                   ,▓╣╣╣╣╣╣╣╣╣▓╖
+   ╔▓╣╣╢╢╣╣╣╣╣╣╢╢╣▓▓æ╖,    ,æ     ,g▓▓    ╙╣▓╖     *╖     ,╥@▓▓╣╣╣╣╣╣╣╣╢╢╣╢╣▓
+  ╔╢╣╣╢▓▓╣╣╣╣╣╣╣╣╣╣╢╢╣╣╢▓▓▀,,╓╓╓, "▓╣▌     ▓▓▀',,╓╓,,`▀▓▓╢╣╣╣╣╣╣╣╣╣╣╣╣╣╣▓▓╣╣╣▓
+ ╒╢╣▓╜ ╒╢╣╣╢▓╜`` `▀╣▓▀`╓@▓╢╢▓▀""╙▀▓▓▄╙╕   ▓`▄▓▓▀╙"╙▀▓╢▓▓▄,"▓╢╢╜```"▀▓╣╣╣▓  ▓╣╣▓
+ ▓╣▓   ▓╣▓╜        ▀ ╔▓╣╣▓╜         ▀▓    ╓▓"         ▀╢╣╢▓, ▌        ▓╣╣    ▓╣L
+j╢▌    ▓▓           ▓╣╣╫╜             ▓  ╓▀             ▓╣╣╢▄          ╙╢     ▓▓
+▐▓     ▐           ▓╣╢╢`      ,╓╖╖,    ▓▓▌    ,╓╓,       ▓╢╣╢r          ▐      ╣
+╟'                 ▓╣╣▓     ,▓`    ▀@  ▓╢" ╓▓╜    ▀▄      ╣╢╣▌                 ▓
+▐                  ▓╣╣▌     ▓       j▓╕   Æ▓       ╟L     ╣╣╣`                 ╟
+ L              ┌   ▓╣▓     ╚▄      "▀▓   ▓▀  ┐    ▓      ╢╣▀                  ▌
+                 ▓╖  ╙▓▓     '▓N▄╖▓▄         ▓▓╓▄&▀     ╓▓▓  ,╔▓              /
+              g▓▓"  "¬ `▀▓▄,       "▀╖     ▄▀`       ╓@▓╜ ,ⁿ` "▀▓▓╖
+            ╒▓"`       ⁿw   "▀R▄,    ▐▓   ▓    ,╓g▓╜"  ,⌐`       "▀▓
+                          ▓▓╖    ╙▀▓▓╖╙  ƒ`æ▓▓▀"    ▄▓▌
+                        ƒ           ▓▓  ,▓╜           ╙,
+                              `"*▓  ,, ▓ ▓ ,. ,▓²"`
+                                  ╙N, ▀▓╓▓╜,╓▓
+                                     `"▓╣▀"`                            """) 
     print("\nJoin the community: https://t.me/BlackIceC2")
-    print(f"{WHITE}Copyright © 2025 BlackIce - All Rights Reserved{RESET}")
-    print(f"Created by iamgeo1 & mzz")
-    print("=" * 50)
-
 # Show help and display attack methods
 def show_help():
     print(f"\n{BLUE}+------------------------ COMMANDS ------------------------+{RESET}")
