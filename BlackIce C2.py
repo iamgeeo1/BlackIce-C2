@@ -39,28 +39,7 @@ def display_menu():
     print(f"{BLUE}| {WHITE}Welcome to the BlackIce C2       {BLUE}|{RESET}")
     print(f"{BLUE}|  {WHITE}Made By Qsecc & Mzz.hm                       |{RESET}")
     print(f"{BLUE}+------------------------------------------+{RESET}")
-print("""          ╓g`                                               ⁿ▄,
-           ╥▓╢╫                                                  ▐╣▓@,
-        ,▓╢╣╣╣▌                                                   ╣╣╣╣▓▄
-      ,▓╣╢╣╣╣╣▓                          y                       /╣╣╣╣╣╣▓▄
-     ▓╢╣╣╣╣╣╣╣╢▓W                    ╔▓   ▓,                   ,▓╣╣╣╣╣╣╣╣╣▓╖
-   ╔▓╣╣╢╢╣╣╣╣╣╣╢╢╣▓▓æ╖,    ,æ     ,g▓▓    ╙╣▓╖     *╖     ,╥@▓▓╣╣╣╣╣╣╣╣╢╢╣╢╣▓
-  ╔╢╣╣╢▓▓╣╣╣╣╣╣╣╣╣╣╢╢╣╣╢▓▓▀,,╓╓╓, "▓╣▌     ▓▓▀',,╓╓,,`▀▓▓╢╣╣╣╣╣╣╣╣╣╣╣╣╣╣▓▓╣╣╣▓
- ╒╢╣▓╜ ╒╢╣╣╢▓╜`` `▀╣▓▀`╓@▓╢╢▓▀""╙▀▓▓▄╙╕   ▓`▄▓▓▀╙"╙▀▓╢▓▓▄,"▓╢╢╜```"▀▓╣╣╣▓  ▓╣╣▓
- ▓╣▓   ▓╣▓╜        ▀ ╔▓╣╣▓╜         ▀▓    ╓▓"         ▀╢╣╢▓, ▌        ▓╣╣    ▓╣L
-j╢▌    ▓▓           ▓╣╣╫╜             ▓  ╓▀             ▓╣╣╢▄          ╙╢     ▓▓
-▐▓     ▐           ▓╣╢╢`      ,╓╖╖,    ▓▓▌    ,╓╓,       ▓╢╣╢r          ▐      ╣
-╟'                 ▓╣╣▓     ,▓`    ▀@  ▓╢" ╓▓╜    ▀▄      ╣╢╣▌                 ▓
-▐                  ▓╣╣▌     ▓       j▓╕   Æ▓       ╟L     ╣╣╣`                 ╟
- L              ┌   ▓╣▓     ╚▄      "▀▓   ▓▀  ┐    ▓      ╢╣▀                  ▌
-                 ▓╖  ╙▓▓     '▓N▄╖▓▄         ▓▓╓▄&▀     ╓▓▓  ,╔▓              /
-              g▓▓"  "¬ `▀▓▄,       "▀╖     ▄▀`       ╓@▓╜ ,ⁿ` "▀▓▓╖
-            ╒▓"`       ⁿw   "▀R▄,    ▐▓   ▓    ,╓g▓╜"  ,⌐`       "▀▓
-                          ▓▓╖    ╙▀▓▓╖╙  ƒ`æ▓▓▀"    ▄▓▌
-                        ƒ           ▓▓  ,▓╜           ╙,
-                              `"*▓  ,, ▓ ▓ ,. ,▓²"`
-                                  ╙N, ▀▓╓▓╜,╓▓
-                                     `"▓╣▀"`                            """) 
+    
 # Show help and display attack methods
 def show_help():
     print(f"\n{BLUE}+------------------------ COMMANDS ------------------------+{RESET}")
@@ -68,28 +47,6 @@ def show_help():
     print(f"{WHITE}[clear]  - Clear the terminal screen{RESET}")
     print(f"{WHITE}[exit]   - Exit the program{RESET}")
     print(f"{BLUE}+---------------------------------------------------------+{RESET}")
-    print("""          ╓g`                                               ⁿ▄,
-           ╥▓╢╫                                                  ▐╣▓@,
-        ,▓╢╣╣╣▌                                                   ╣╣╣╣▓▄
-      ,▓╣╢╣╣╣╣▓                          y                       /╣╣╣╣╣╣▓▄
-     ▓╢╣╣╣╣╣╣╣╢▓W                    ╔▓   ▓,                   ,▓╣╣╣╣╣╣╣╣╣▓╖
-   ╔▓╣╣╢╢╣╣╣╣╣╣╢╢╣▓▓æ╖,    ,æ     ,g▓▓    ╙╣▓╖     *╖     ,╥@▓▓╣╣╣╣╣╣╣╣╢╢╣╢╣▓
-  ╔╢╣╣╢▓▓╣╣╣╣╣╣╣╣╣╣╢╢╣╣╢▓▓▀,,╓╓╓, "▓╣▌     ▓▓▀',,╓╓,,`▀▓▓╢╣╣╣╣╣╣╣╣╣╣╣╣╣╣▓▓╣╣╣▓
- ╒╢╣▓╜ ╒╢╣╣╢▓╜`` `▀╣▓▀`╓@▓╢╢▓▀""╙▀▓▓▄╙╕   ▓`▄▓▓▀╙"╙▀▓╢▓▓▄,"▓╢╢╜```"▀▓╣╣╣▓  ▓╣╣▓
- ▓╣▓   ▓╣▓╜        ▀ ╔▓╣╣▓╜         ▀▓    ╓▓"         ▀╢╣╢▓, ▌        ▓╣╣    ▓╣L
-j╢▌    ▓▓           ▓╣╣╫╜             ▓  ╓▀             ▓╣╣╢▄          ╙╢     ▓▓
-▐▓     ▐           ▓╣╢╢`      ,╓╖╖,    ▓▓▌    ,╓╓,       ▓╢╣╢r          ▐      ╣
-╟'                 ▓╣╣▓     ,▓`    ▀@  ▓╢" ╓▓╜    ▀▄      ╣╢╣▌                 ▓
-▐                  ▓╣╣▌     ▓       j▓╕   Æ▓       ╟L     ╣╣╣`                 ╟
- L              ┌   ▓╣▓     ╚▄      "▀▓   ▓▀  ┐    ▓      ╢╣▀                  ▌
-                 ▓╖  ╙▓▓     '▓N▄╖▓▄         ▓▓╓▄&▀     ╓▓▓  ,╔▓              /
-              g▓▓"  "¬ `▀▓▄,       "▀╖     ▄▀`       ╓@▓╜ ,ⁿ` "▀▓▓╖
-            ╒▓"`       ⁿw   "▀R▄,    ▐▓   ▓    ,╓g▓╜"  ,⌐`       "▀▓
-                          ▓▓╖    ╙▀▓▓╖╙  ƒ`æ▓▓▀"    ▄▓▌
-                        ƒ           ▓▓  ,▓╜           ╙,
-                              `"*▓  ,, ▓ ▓ ,. ,▓²"`
-                                  ╙N, ▀▓╓▓╜,╓▓
-                                     `"▓╣▀"`                            """) 
 
     print(f"\n{BLUE}Available Attack Methods:{RESET}")
     for i, method in enumerate(ATTACK_METHODS, 1):
@@ -149,11 +106,24 @@ def send_attack(method, host, port, duration):
 
     if response.status_code == 200:
         print(f"\n{BLUE}Booted By BlackIce.... {host}:{port} using {method} for {duration} seconds!{RESET}")
+        # Play video after attack
+        play_video()
     else:
         print(f"\n{RED}Error: {response.text}{RESET}")
 
     time.sleep(3)
     main()
+
+# Play video in terminal (Linux/MacOS - ASCII Art in terminal)
+def play_video():
+    video_path = r"C:\Users\gtw2k\Videos\Recording 2025-03-26 212216.mp4"  # Path to the video
+
+    if os.name == 'posix':  # If the system is Linux or MacOS
+        os.system(f"mpv --vo=caca {video_path}")  # This will play the video in ASCII art using mpv
+    elif os.name == 'nt':  # If the system is Windows
+        print(f"{RED}[!] Direct video playback in terminal is not supported on Windows.{RESET}")
+        print(f"{RED}[!] Opening video with default media player...{RESET}")
+        os.startfile(video_path)  # Open video with the default player
 
 # Main function
 def main():
