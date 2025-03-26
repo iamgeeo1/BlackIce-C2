@@ -61,7 +61,6 @@ j╢▌    ▓▓           ▓╣╣╫╜             ▓  ╓▀             
                               `"*▓  ,, ▓ ▓ ,. ,▓²"`
                                   ╙N, ▀▓╓▓╜,╓▓
                                      `"▓╣▀"`                            """) 
-    print("\nJoin the community: https://t.me/BlackIceC2")
 # Show help and display attack methods
 def show_help():
     print(f"\n{BLUE}+------------------------ COMMANDS ------------------------+{RESET}")
